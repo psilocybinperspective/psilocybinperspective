@@ -1,0 +1,53 @@
+// -*- c -*-
+
+digraph {
+  rankdir=TB;
+
+  node0 [label="I want to try magic mushrooms."];
+  node0 -> node1 [label="yes"];
+  node0 -> no [label="no"];
+
+  node1 [label="I'm generally a curious person."];
+  node1 -> node2 [label="yes"];
+  node1 -> no [label="no"];
+
+  node2 [label="Would it be my first psychedelic trip?\n\
+Examples of psychedelic substances include psilocybin/shrooms, LSD,\n\
+mescaline/peyote, and DMT/ayahuasca."];
+  node2 -> yes [label="no"];
+  node2 -> node3 [label="yes"];
+
+  node3 [label="I'm 27 years old or older."];
+  node3 -> node4 [label="no"];
+  node3 -> node6 [label="yes"];
+
+  node4 [label="I often feel sad, bummed, or depressed."];
+  node4 -> node5 [label="yes"];
+  node4 -> node41 [label="no"];
+
+  node41 [label="I'm battling an addiction."];
+  node41 -> node5 [label="yes"];
+  node41 -> no [label="no"];
+
+  node5 [label="I'm 18 years old or older."];
+  node5 -> no [label="no"];
+  node5 -> node6 [label="yes"];
+
+  node6 [label="I'm willing to be physically vulnerable for 3-4 hours."]
+  node6 -> node61 [label="no"];
+  node6 -> yes [label="yes"];
+
+  node61 [label="Can I accept to be scared by my own thoughts?"]
+  node61 -> node7 [label="no"];
+  node61 -> yes [label="yes"];
+
+  node7 [label="but I'm a tough guy/gal!"];
+  node7 -> no [label="yes"];
+  node7 -> no [label="no"];
+
+  yes [shape=box, label="Yes,\n\
+a mushroom trip seems like a good idea for you\n\
+if done carefully and legally."];
+  no [shape=box, label="No,\n\
+you're not ready for magic mushrooms."];
+}
