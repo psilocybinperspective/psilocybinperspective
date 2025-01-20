@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+#
+# Inject boilerplate into HTML files
+#
+set -eu
+
+if [[ $# != 2 ]]; then
+  echo "Usage: $0 SRC DST" >&2
+  exit 1
+fi
+
+src=$1
+dst=$2
+
+mkdir -p tmp
+tmp=tmp/a.html
+cp "$src" "$tmp"
+for injected_file in boilerplate/*.html; do
+  var=$(basename "$injected_file" .html)
+  # Replace ${FOO} with the contents of boilerplate/FOO.html
+  sed_escaped_contents=$(sed 's:/:\\\/:g' "$injected_file" \
+                           | sed 's/$/\\n/g' \
+                           | tr -d '\n')
+  sed -i -e "s/\${\($var\)}/$sed_escaped_contents/g" "$tmp"
+done
+mv "$tmp" "$dst"

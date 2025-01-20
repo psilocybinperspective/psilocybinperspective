@@ -12,13 +12,13 @@ build:
 	mkdir -p $(CSSDIR)
 	cp -a css/* $(CSSDIR)
 	# Build and install HTML files
-	cp index.html $(DOCROOT)
+	./inject index.html $(DOCROOT)/index.html
 	mkdir -p $(DOCROOT)/should-i-try-magic-mushrooms
-	cp should-i-try-magic-mushrooms/index.html \
-	  $(DOCROOT)/should-i-try-magic-mushrooms
+	./inject should-i-try-magic-mushrooms/index.html \
+	  $(DOCROOT)/should-i-try-magic-mushrooms/index.html
 	mkdir -p $(DOCROOT)/psilocybin-mushroom-trip-checklist
-	cp psilocybin-mushroom-trip-checklist/index.html \
-	  $(DOCROOT)/psilocybin-mushroom-trip-checklist
+	./inject psilocybin-mushroom-trip-checklist/index.html \
+	  $(DOCROOT)/psilocybin-mushroom-trip-checklist/index.html
 
 LOCAL_PORT := 8080
 LOCAL_URL := http://0.0.0.0:$(LOCAL_PORT)/
