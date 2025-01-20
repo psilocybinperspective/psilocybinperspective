@@ -1,3 +1,5 @@
+# Build the website residing in docs/
 .PHONY: build
 build:
-	dot -Tpng shouldi.dot -o shouldi.png
+	mkdir -p docs/img
+	dot -Tpng shouldi.dot -o docs/img/shouldi.png
