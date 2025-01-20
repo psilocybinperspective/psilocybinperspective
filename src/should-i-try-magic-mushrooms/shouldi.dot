@@ -52,9 +52,22 @@ or depressed."];
   node7 -> no [label="no"];
 
   yes [shape=box, label="Yes,\n\
-a mushroom trip seems\nlike a good idea for you\n\
-if done with the standard\nprecautions and legally."];
+it looks like a psilocybin mushroom\n\
+trip might be something you'll enjoy!\n\
+Proper preparation is always\n\
+key to avoid a bad experience.\n\
+A family history of psychosis\n\
+comes with a high risk of\n\
+serious side effects.\n\
+In doubt, please consult with\n\
+a mental health professional.\n\
+Stay safe and keep others safe.\n\
+We do not endorse illegal uses\n\
+of psilocybin."];
+
   no [shape=box, label="No,\n\
-you're not ready\n\
-for magic mushrooms."];
+you're probably not ready\n\
+for magic mushrooms.\n\
+They're not for everyone\n\
+and it's okay!"];
 }
