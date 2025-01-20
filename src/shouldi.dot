@@ -3,7 +3,9 @@
 digraph {
   rankdir=TB;
 
-  node0 [label="I want to experience a psychedelic trip with psilocybin mushrooms.\n\
+  node0 [label="I want to experience\n\
+a psychedelic trip with\n\
+psilocybin mushrooms.\n\
 (but I'm not sure if I should)"];
   node0 -> node1 [label="yes"];
   node0 -> no [label="no"];
@@ -12,8 +14,10 @@ digraph {
   node1 -> node2 [label="yes"];
   node1 -> no [label="no"];
 
-  node2 [label="Would it be my first psychedelic trip?\n\
-Examples of psychedelic substances include psilocybin/shrooms, LSD,\n\
+  node2 [label="Would it be my first\n\
+psychedelic trip?\n\
+Examples of psychedelic substances\n\
+include psilocybin/shrooms, LSD,\n\
 mescaline/peyote, and DMT/ayahuasca."];
   node2 -> yes [label="no"];
   node2 -> node3 [label="yes"];
@@ -22,7 +26,8 @@ mescaline/peyote, and DMT/ayahuasca."];
   node3 -> node4 [label="no"];
   node3 -> node6 [label="yes"];
 
-  node4 [label="I often feel sad, bummed, or depressed."];
+  node4 [label="I often feel sad, bummed,\n\
+or depressed."];
   node4 -> node5 [label="yes"];
   node4 -> node41 [label="no"];
 
@@ -34,11 +39,11 @@ mescaline/peyote, and DMT/ayahuasca."];
   node5 -> no [label="no"];
   node5 -> node6 [label="yes"];
 
-  node6 [label="I'm willing to be physically vulnerable for 3-4 hours."]
+  node6 [label="I'm willing to be\nphysically vulnerable\nfor 3-4 hours."]
   node6 -> node61 [label="yes"];
   node6 -> no [label="no"];
 
-  node61 [label="Can I accept to be scared by my own thoughts?"]
+  node61 [label="Can I accept\nto be scared\nby my own thoughts?"]
   node61 -> node7 [label="no"];
   node61 -> yes [label="yes"];
 
@@ -47,8 +52,9 @@ mescaline/peyote, and DMT/ayahuasca."];
   node7 -> no [label="no"];
 
   yes [shape=box, label="Yes,\n\
-a mushroom trip seems like a good idea for you\n\
-if done with the standard precautions and legally."];
+a mushroom trip seems\nlike a good idea for you\n\
+if done with the standard\nprecautions and legally."];
   no [shape=box, label="No,\n\
-you're not ready for magic mushrooms."];
+you're not ready\n\
+for magic mushrooms."];
 }
