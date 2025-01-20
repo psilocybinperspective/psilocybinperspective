@@ -19,3 +19,11 @@ build:
 	mkdir -p $(DOCROOT)/psilocybin-mushroom-trip-checklist
 	cp psilocybin-mushroom-trip-checklist/index.html \
 	  $(DOCROOT)/psilocybin-mushroom-trip-checklist
+
+LOCAL_PORT := 8080
+LOCAL_URL := http://0.0.0.0:$(LOCAL_PORT)/
+
+.PHONY: live
+live:
+	xdg-open $(LOCAL_URL)
+	python3 -m http.server --directory ../docs $(LOCAL_PORT)
