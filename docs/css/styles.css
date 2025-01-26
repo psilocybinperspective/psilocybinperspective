@@ -11,3 +11,6 @@ body {
   --text-color: #202020;
   color: var(--text-color);
 }
+
+.footer {
+}

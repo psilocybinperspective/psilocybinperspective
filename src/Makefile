@@ -5,7 +5,8 @@ CSSDIR := $(DOCROOT)/css
 PAGES := \
   about \
   should-i-try-magic-mushrooms \
-  psilocybin-mushroom-trip-checklist
+  psilocybin-mushroom-trip-checklist \
+  risks-and-rewards
 
 # Build the website residing in docs/
 .PHONY: build
