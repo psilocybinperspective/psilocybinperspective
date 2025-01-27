@@ -6,7 +6,8 @@ PAGES := \
   about \
   should-i-try-magic-mushrooms \
   psilocybin-mushroom-trip-checklist \
-  risks-and-rewards
+  pros-and-cons \
+  celebrities
 
 # Build the website residing in docs/
 .PHONY: build
