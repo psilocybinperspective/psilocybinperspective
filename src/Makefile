@@ -14,8 +14,7 @@ PAGES := \
 build:
 	# Build and install images
 	mkdir -p $(IMGDIR)
-	dot -Tpng should-i-try-magic-mushrooms/shouldi.dot \
-	  -o $(IMGDIR)/shouldi.png
+	cp -u should-i-try-magic-mushrooms/shouldi.drawio.png $(IMGDIR)/
 	# Build and install CSS files
 	mkdir -p $(CSSDIR)
 	cp -a css/* $(CSSDIR)
